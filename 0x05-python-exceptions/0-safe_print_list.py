@@ -2,8 +2,12 @@
 
 def safe_print_list(my_list=[], x=0):
     '''prints x elements of a list'''
-    try:
-        for i in range(x - 1):
-            print(my_list[i])
-    except indexError:
-        print(my_list)
+    count = 0
+    for i in range(0, x):
+        try:
+            print("{:d}".format(my_list[i]), end = "")
+            count += 1
+        except (ValueError, TypeError):
+            continue
+    print("")
+    return count
