@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # Author: Erick Karanja
 
-class rectangle:
+class Rectangle:
     '''initializing class rectangle'''
     def __init__(self, width=0, height=0):
         '''initializes class rectangle.
@@ -31,7 +31,7 @@ class rectangle:
         '''defining the height of the rectangle'''
         return (self._height)
 
-    @self.setter
+    @height.setter
     def height(self, value):
         '''sets the height value
         args:
