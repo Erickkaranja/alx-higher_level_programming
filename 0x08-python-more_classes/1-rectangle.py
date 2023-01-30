@@ -5,11 +5,13 @@
 
 class Rectangle:
     '''initializing class rectangle'''
+
     def __init__(self, width=0, height=0):
         '''initializes class rectangle.
+
         args:
-        width (int):width odf the rectangle.
-        height (int):height of the rectangle.
+            width (int):width odf the rectangle.
+            height (int):height of the rectangle.
         '''
         self.width = width
         self.height = height
@@ -37,7 +39,7 @@ class Rectangle:
     def height(self, value):
         '''sets the height value
         args:
-        value(int):height of the rectangle.
+            value(int):height of the rectangle.
         '''
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
