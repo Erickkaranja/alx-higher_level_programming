@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 # Author: Erick Karanja
+'''Defining class rectangle.'''
+
 
 class Rectangle:
     '''Represent class rectangle
