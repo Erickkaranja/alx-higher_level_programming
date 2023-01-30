@@ -60,7 +60,7 @@ class Rectangle:
         Represents rectangle with # characters.
         '''
         if self._width == 0 or self._height == 0:
-           return ("")
+            return ("")
 
         rect = []
         for i in range(self._height):
@@ -74,6 +74,7 @@ class Rectangle:
         rect = "Rectangle(" + str(self._width)
         rect += ", " + str(self._height) + ")"
         return (rect)
+
     def __del__(self):
         '''prints message for every deletion of Rectangle'''
         print("Bye rectangle...")
