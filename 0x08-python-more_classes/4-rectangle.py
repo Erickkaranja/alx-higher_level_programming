@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 # Author: Erick Karanja
+'''Defining Rectangle.'''
+
 
 class Rectangle:
     '''initializes class rectangle'''
@@ -58,7 +60,7 @@ class Rectangle:
         Represents rectangle with # characters.
         '''
         if self._width == 0 or self._height == 0:
-           return ("")
+            return ("")
 
         rect = []
         for i in range(self._height):
