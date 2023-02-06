@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # Author : Erick Karanja
 '''Defines the is kind of class function.'''
 
