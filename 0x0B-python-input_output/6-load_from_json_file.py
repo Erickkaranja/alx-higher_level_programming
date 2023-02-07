@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+# Author: Erick Karanja
+'''implementing func load from json.'''
+import json
+
+
+def load_from_json_file(filename):
+    '''creates an Object from a “JSON file”'''
+    json.load(filename)
