@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-# Author: Erick Karanja
-'''adds all python objects to a list and saves in a file.'''
+# 9-add_item.py
+# Brennan D Baraban <375@holbertonschool.com>
+"""Add all arguments to a Python list and save them to a file."""
 import sys
 
 if __name__ == "__main__":
-    save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+    save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
     load_from_json_file = \
-    __import__('6-load_from_json_file').load_from_json_file
+        __import__('8-load_from_json_file').load_from_json_file
 
     try:
-        item = load_from_json_file("add_item.json")
+        items = load_from_json_file("add_item.json")
     except FileNotFoundError:
         items = []
     items.extend(sys.argv[1:])
