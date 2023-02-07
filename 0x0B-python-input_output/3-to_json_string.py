@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 # Author: Erick Karanja
-
-import json
 '''JSON representation of a python object.'''
+import json
 
 
 def to_json_string(my_obj):
