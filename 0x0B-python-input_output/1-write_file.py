@@ -11,4 +11,4 @@ def write_file(filename="", text=""):
         text(str): Text to be appended to the file.
     '''
     with open(filename, 'w', encoding="utf-8") as f:
-        print(f.write(text))
+        return f.write(text)
