@@ -20,7 +20,7 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-        super().__Init__(id)
+        super().__init__(id)
 
     @property
     def width(self):
@@ -66,6 +66,11 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = value
 
+    @property
+    def y(self):
+        '''getter to the attribute y.'''
+        return (self.__y)
+
     @y.setter
     def y(self, value):
         '''sets the private attribute y.'''
@@ -74,11 +79,6 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-
-    @property
-    def y(self):
-        '''getter to the attribute y.'''
-        return (self.__y)
 
     def update(self, *args, **kwargs):
         '''Assigns arguement to each attribute.

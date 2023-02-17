@@ -4,6 +4,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     '''initializing class square.
     Args:
@@ -37,10 +38,10 @@ class Square(Rectangle):
     def to_dictionary(self):
         '''represent dictionary representation to a square.'''
         return {
-            "id":self.id
-            "size":self.width
-            "x":self.x
-            "y":self.y
+            "id": self.id,
+            "size": self.width,
+            "x": self.x,
+            "y": self.y
 
             }
 
@@ -65,7 +66,7 @@ class Square(Rectangle):
                 a += 1
 
         elif kwargs and len(kwargs) != 0:
-            for k and v in kwargs.items():
+            for k, v in kwargs.items():
                 if k == "id":
                     if v is None:
                         self.__init__(self.size, self.size, self.x, self.y)
