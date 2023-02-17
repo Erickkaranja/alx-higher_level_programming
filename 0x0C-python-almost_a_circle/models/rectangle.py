@@ -4,6 +4,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     '''Initializing class rectangle.'''
 
@@ -38,7 +39,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        '''Gets the height value.'''    
+        '''Gets the height value.'''
         return (self.__height)
 
     @height.setter
@@ -49,12 +50,12 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
-    self.__height = value
+        self.__height = value
 
     @property
     def x(self):
-        '''Gets the width value.'''    
-    return (self.__x)
+        '''Gets the width value.'''
+        return (self.__x)
 
     @x.setter
     def x(self, value):
@@ -63,15 +64,21 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
-    self.__x = value
+        self.__x = value
 
-    @property
-    def y(self):
+    @y.setter
+    def y(self, value):
         '''sets the private attribute y.'''
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
+        self.__y = value
+
+    @property
+    def y(self):
+        '''getter to the attribute y.'''
+        return (self.__y)
 
     def update(self, *args, **kwargs):
         '''Assigns arguement to each attribute.
@@ -104,11 +111,12 @@ class Rectangle(Base):
                 a += 1
 
         elif kwargs and len(kwargs) != 0:
-            for k and v in kwargs.items():
+            for k, v in kwargs.items():
                 if k == "id":
                     if v is None:
                         self.__init__(self.width, self.height, self.x, self.y)
-                    else:self.id = v
+                    else:
+                        self.id = v
                 elif k == "width":
                     self.width = v
                 elif k == "height":
@@ -121,14 +129,15 @@ class Rectangle(Base):
     def to_dictionary(self):
         '''returns the dictionary representation of rectangle.'''
         return {
-            "id":self.id,
-            "width":self.width,
-            "height":self.height,
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
             "x": self.x,
             "y": self.y
         }
 
     def __str__(self):
         '''Represents the print() and string representation of rectangle.'''
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
-                self.width, self.height))
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
