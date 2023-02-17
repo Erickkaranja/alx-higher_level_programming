@@ -80,6 +80,10 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
+    def area(self):
+        '''Returns area to the rectangle.'''
+        return self.width * self.height
+
     def update(self, *args, **kwargs):
         '''Assigns arguement to each attribute.
         Args:
