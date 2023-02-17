@@ -2,6 +2,7 @@
 # Author : Erick Karanja
 '''Defining class rectangle.'''
 
+from models.base import Base
 
 class Rectangle(Base):
     '''Initializing class rectangle.'''
