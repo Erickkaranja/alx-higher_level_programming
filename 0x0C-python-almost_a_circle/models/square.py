@@ -10,8 +10,9 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         '''constructor to the class square.
+
         Args:
-            self (int): value of both width and height of the square.
+            size (int): value of both width and height of the square.
             x (int): x co-ordinate value.
             y (int): y co-ordinate value.
             id (int): id to the respective square.

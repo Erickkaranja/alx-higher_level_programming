@@ -16,10 +16,30 @@ class Rectangle(Base):
             x(int): x attribute to the rectangle.
             y(int): y attribute to the rectangle.
         '''
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        if type(width) != int:
+            raise TypeError("width must be an integer")
+        elif width <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.__width = width
+        if type(height) != int:
+            raise TypeError("height must be an integer")
+        elif height <= 0:
+            raise ValueError("height must be > 0")
+        else:
+            self.__height = height
+        if type(x) != int:
+            raise TypeError("x must be an integer")
+        elif x < 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = x
+        if type(y) != int:
+            raise TypeError("y must be an integer")
+        elif y < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = y
         super().__init__(id)
 
     @property
@@ -46,7 +66,7 @@ class Rectangle(Base):
     def height(self, value):
         '''sets the private attribute height.'''
 
-        if type(value) != int:
+        if type(value) != int and type(self.__height) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -82,7 +102,7 @@ class Rectangle(Base):
 
     def area(self):
         '''Returns area to the rectangle.'''
-        return self.width * self.height
+        return self.__width * self.__height
 
     def display(self):
         """Print the Rectangle using the `#` character."""
