@@ -66,7 +66,7 @@ class Rectangle(Base):
     def height(self, value):
         '''sets the private attribute height.'''
 
-        if type(value) != int and type(self.__height) != int:
+        if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
