@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # author: Erick Karanja
+'''initializing class square.'''
 
 
 class Square:
@@ -19,4 +20,4 @@ class Square:
 
     def area(self):
         '''computes the area of a square.'''
-        return(self.__size * self.__size)
+        return self.__size * self.__size
