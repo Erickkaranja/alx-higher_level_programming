@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 # author: Erick Karanja
+'''Defining class square.'''
+
 
 class Square:
     '''initializes a type square'''
