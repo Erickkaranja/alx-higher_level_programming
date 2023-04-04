@@ -4,10 +4,12 @@
 
 
 class Square:
+    '''defining class square.'''
+
     def __init__(self, size=0):
         '''creating the square.
         args:
-        size(int):defines a square by its size.
+        size(int) :defines a square by its size.
         '''
         if type(size) != int:
             raise TypeError("size must be an integer")

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # Erick Karanja
 
+
 class Square:
     '''defines a square by size'''
 
