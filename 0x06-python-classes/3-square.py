@@ -1,13 +1,16 @@
 #!/usr/bin/python3
 # author: Erick Karanja
 
+
 class Square:
     '''initializes a type square'''
+
     def __init__(self, size=0):
         '''defines a squareby size.
         arg:
         size(int):size of a square.
         '''
+
         if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
