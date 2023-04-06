@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#Erick Karanja
+# Erick Karanja
 '''Defining class node.'''
 
 
@@ -36,6 +36,7 @@ class Node:
         if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
+
 
 class SinglyLinkedList:
     '''intializing class SinglyLinkedList.'''
