@@ -1,0 +1,10 @@
+# 2-matrix_divided.txt
+# Author : Erick Karanja
+
+============================
+usage in 2-matrix_divided.py
+============================
+
+'''matrix_divided function takes two arguements the matrix and
+the div (number to divide the matrix)'''
+

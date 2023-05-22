@@ -1,0 +1,71 @@
+#0-add_integers.txt
+# Author : Erick Karanja
+
+==========================
+how to use 0-add_integer.py
+===========================
+
+this module defines an integer addition function
+
+usage
+====
+
+''add_integer(...)''' returns the addition of two arguements.
+similar to use of the ''+'' opearator on two numbers.
+
+::
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(2, 3)
+    5
+
+    >>> add_integer(2, -1)
+    1
+
+The function also works for floating point numbers.
+::
+    >>> add_integer(2.0, 3.0)
+    5
+
+Floating point numbers are casted to integers before addition.
+
+::
+    >>> add_integer(2.9, 3.4)
+    5
+
+Non floating values can also be combined
+
+::
+    >>> add_integer(2.9, 3)
+    5
+
+The second arguement is optional but default value of "98"
+
+::
+    >>> add_integer(2)
+    100
+
+exception cases
+===============
+
+''add_integer function receives two int\float arguements a and b
+if the arguement fails, TypeError should be raised.''
+
+::
+    >>> add_integer('Hello', 2)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+    >>> add_integer(2, 'Hello')
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+::
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+    >>> add_integer(2, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
