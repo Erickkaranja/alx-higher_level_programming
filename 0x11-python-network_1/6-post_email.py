@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''displays the value of the varible X-Request-Id.'''
+'''sends a post request to a given url with email data.'''
 
 import sys
 import requests
@@ -7,5 +7,5 @@ import requests
 if __name__ == "__main__":
     url = sys.argv[1]
     value = {'email': sys.argv[2]}
-    r = requests.post(url, data=value)
+    r = requests.post(url, json=value)
     print(r.rext)
