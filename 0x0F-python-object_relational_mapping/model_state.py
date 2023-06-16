@@ -1,17 +1,14 @@
-from sqlalchemy import create_engine, Integer, Column, String
+#!/bin/usr/python3
+''''''
+
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
 class State(Base):
-    '''Declaring class state that inherits from Base model.
+    '''instanciating class states.'''
+    __tablename__ = 'states'
 
-    Attributes:
-        __tablename__ (str): name of mysql table to be created to represent
-               class state.
-        id (int) : unique id that acts as the primary key.
-        name(str): represents the name column of class state.
-    '''
-    __tablename__="states"
+    id = Column(Integer(), nullable=False, autoincrement=True, primary_key=True)
     name = Column(String(128), nullable=False)
-    id = Column(Integer, autoincrement=True, primary_key=True)
