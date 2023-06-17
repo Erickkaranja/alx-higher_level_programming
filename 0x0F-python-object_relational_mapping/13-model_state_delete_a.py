@@ -14,6 +14,7 @@ if __name__ == "__main__":
     session = sessionmaker(bind=engine)
     session = session()
 
-    row = session.query(State).filter_by(id=2).first()
-    row.name = 'New Mexico'
+    for state in session.query(State).order_by(State.id):
+        if "a" in state.name:
+            session.delete(state)
     session.commit()
