@@ -13,7 +13,7 @@ if __name__ == "__main__":
                          db=sys.argv[3],
                          port=3306)
     c = db.cursor()
-    c.execute("SELECT * FROM `states` ORDER BY `id`")
+    c.execute("SELECT * FROM `states` ORDER BY `states`.`id` ASC")
     [print(state) for state in c.fetchall() if state[1][0] == "N"]
     c.close()
     db.close()
