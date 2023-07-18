@@ -1,5 +1,6 @@
 -- creates a table called first_table in the current database.
-IF NOT EXISTS CREATE TABLE `first_table` (
-    `id` INT,
+USE DATABASE hbtn_0c_0;
+CREATE TABLE IF NOT EXISTS `first_table` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
     `name` VARCHAR(256)
 );
