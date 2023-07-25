@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const request = require('request');
-let url = '' + process.argv[2];
+const url = '' + process.argv[2];
 request(url, function (error, response, body) {
-  console.log(error || json.parse(body).title);
-  });
+  console.log(error || JSON.parse(body).title);
+});
