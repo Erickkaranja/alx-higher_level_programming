@@ -14,5 +14,5 @@ if __name__ == '__main__':
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for state in session.query(State).order_by(State.id):
-        print("{}: {}".format(state.id, state.name))
+    objs = session.query(State)
+    print({"{}.{}".format(type(o).__name__, o.id): o.__dict__ for o in objs})
